@@ -100,7 +100,7 @@ updated_at :     timestamp
 
 * Instale o [Composer](https://getcomposer.org/download) e [Npm](https://nodejs.org/en/download)
 * Clone o repositório: <br />
-`LINK REPOSITORIO`
+`https://github.com/tiagocriar/admin-laravel-teste`
 * Entre na pasta criada pelo git
 * Crie um arquivo .env e configure as variaveis de ambiente e de banco de dados, use de exemplo o arquivo `.env.example`
 * Instale as dependencias do projeto PHP: `composer install`
