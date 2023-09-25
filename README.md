@@ -1,66 +1,123 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## ADMIN Laravel Test (Teste Fullstack para Miner Tecnologia)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+ADMIN Laravel Test é um projeto teste desenvolvido em PHP com framework Laravel 10. Para UI foi utilizado React TailAdmin. Esse teste para vaga fullstack na empresa Miner Tecnologia, foi desenvolvido um sistemas de usuários com níveis ADMIN e DEFAULT e permissões individuais para usuários: Produtos, Categorias e Marcas.
 
-## About Laravel
+## Requerimentos para instalação
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* PHP (8.2)
+* Node (18.18)
+* Database (MySQL)
+* Web Server (Nginx)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Documentação [Laravel 10](https://laravel.com/docs/10.x)
+* Documentação [TailAdmin](https://github.com/TailAdmin/free-react-tailwind-admin-dashboard)
 
-## Learning Laravel
+### Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### 1 - Autenticação
+**1.1. Login Admin**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+#### 2 - Usuários
+**2.1. Listagem de usuários**
+**2.2. Paginação de usuários**
+**2.3. Cadastro de funcionários**
+**2.4. Edição de usuários**
+**2.6. Exclusão de funcionário**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### 3 - Permissões
+**3.1. Edição de permissão na tela usuários**
+**3.2. Edição de permissão na tela listar usuários**
 
-## Laravel Sponsors
+#### 4 - Produtos
+**4.1. Listagem de produtos**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+#### 5 - Categorias
+**5.1. Listagem de categorias**
 
-### Premium Partners
+#### 6 - Marcas
+**6.1. Listagem de marcas**
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+---
 
-## Contributing
+### Banco de dados
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+O projeto tem migrations com a seguinte estrutura:
 
-## Code of Conduct
+Tabela - `users`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+id:                  int
+name:      string
+role:              enum('ADMIN', 'DEFAULT')
+email:              string
+created_at :       timestamp
+updated_at :     timestamp
+```
 
-## Security Vulnerabilities
+Tabela - `permissions `
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+id:                  int
+idUser:      int
+permission :              enum('MARCAS ', 'PRODUTOS ','CATEGORIAS')
+created_at :       timestamp
+updated_at :     timestamp
+```
 
-## License
+Tabela - `produtos  `
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+id:                  int
+idMarca:      int
+idCategoria:      int
+title :             string
+created_at :       timestamp
+updated_at :     timestamp
+```
+
+Tabela - `categorias  `
+
+```
+id:                  int
+title :             string
+created_at :       timestamp
+updated_at :     timestamp
+```
+
+Tabela - `marcas  `
+
+```
+id:                  int
+title :             string
+created_at :       timestamp
+updated_at :     timestamp
+```
+---
+
+## Instalação
+
+* Instale o [Composer](https://getcomposer.org/download) e [Npm](https://nodejs.org/en/download)
+* Clone o repositório: <br />
+`LINK REPOSITORIO`
+* Entre na pasta criada pelo git
+* Crie um arquivo .env e configure as variaveis de ambiente e de banco de dados, use de exemplo o arquivo `.env.example`
+* Instale as dependencias do projeto PHP: `composer install`
+* Gere a chave laravel `php artisan key:generate`
+* Rode as migrations `php artisan migrate`
+* Rode os sedeers `php artisan db:seed`
+* Instale as dependencias node: `npm install`
+* Gera arquivos node: `npm run build`
+
+## Úteis
+
+### Acesso administrador padrão
+```plain
+login: admin@email.com
+senha: changeme
+```
+
+## Licença
+
+O projeto está vinculado a licença [MIT](https://opensource.org/licenses/MIT).

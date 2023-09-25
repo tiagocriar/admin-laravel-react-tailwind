@@ -16,6 +16,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+
+        $this->call([
+            AdminSeeder::class
+        ]);
+
         Marca::factory()->count(10)->create();
         Categoria::factory()->count(5)->create();
         Produto::factory()->count(100)->create();
