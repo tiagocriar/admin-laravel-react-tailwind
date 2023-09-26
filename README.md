@@ -1,6 +1,6 @@
 ## ADMIN Laravel Test (Teste Fullstack para Miner Tecnologia)
 
-ADMIN Laravel Test é um projeto teste desenvolvido em PHP com framework Laravel 10. Para UI foi utilizado React TailAdmin. Esse teste para vaga fullstack na empresa Miner Tecnologia, foi desenvolvido um sistemas de usuários com níveis ADMIN e DEFAULT e permissões individuais para usuários: Produtos, Categorias e Marcas.
+ADMIN Laravel Test é um projeto teste desenvolvido em PHP com framework Laravel 10. Para UI foi utilizado React TailAdmin. Esse teste para vaga fullstack na empresa Miner Tecnologia, foi desenvolvido um sistema de usuários com níveis ADMIN e DEFAULT e permissões individuais para usuários: Produtos, Categorias e Marcas.
 
 ## Requerimentos para instalação
 
@@ -14,31 +14,30 @@ ADMIN Laravel Test é um projeto teste desenvolvido em PHP com framework Laravel
 * Documentação [Laravel 10](https://laravel.com/docs/10.x)
 * Documentação [TailAdmin](https://github.com/TailAdmin/free-react-tailwind-admin-dashboard)
 
-### Features
+## Features
 
-#### 1 - Autenticação
-**1.1. Login Admin**
+### 1. Autenticação
+#### 1.1. Login de usuários
 
-#### 2 - Usuários
-**2.1. Listagem de usuários**
-**2.2. Paginação de usuários**
-**2.3. Cadastro de funcionários**
-**2.4. Edição de usuários**
-**2.6. Exclusão de funcionário**
+### 2. Usuários
+#### 2.1. Listagem de Usuários
+#### 2.2. Paginação de Usuários
+#### 2.3. Cadastro de Usuários
+#### 2.4. Edição de Usuários
+#### 2.5. Exclusão de Funcionários
 
-#### 3 - Permissões
-**3.1. Edição de permissão na tela usuários**
-**3.2. Edição de permissão na tela listar usuários**
+### 3. Permissões
+#### 3.1. Edição de Permissões na Tela de Usuários
+#### 3.2. Edição de Permissões na Tela de Listagem de Usuários
 
-#### 4 - Produtos
-**4.1. Listagem de produtos**
+### 4. Produtos
+#### 4.1. Listagem de Produtos
 
-#### 5 - Categorias
-**5.1. Listagem de categorias**
+### 5. Categorias
+#### 5.1. Listagem de Categorias
 
-#### 6 - Marcas
-**6.1. Listagem de marcas**
-
+### 6. Marcas
+#### 6.1. Listagem de Marcas
 ---
 
 ### Banco de dados
@@ -121,3 +120,4 @@ senha: changeme
 ## Licença
 
 O projeto está vinculado a licença [MIT](https://opensource.org/licenses/MIT).
+****

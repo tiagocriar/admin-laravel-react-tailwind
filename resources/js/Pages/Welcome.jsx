@@ -23,7 +23,7 @@ export default function Welcome({ auth }) {
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div className="p-6 text-gray-900">
-                            Seja bem vindo {user.name}!
+                            Seja bem vindo(a) {user.name}!
                         </div>
                     </div>
                 </div>

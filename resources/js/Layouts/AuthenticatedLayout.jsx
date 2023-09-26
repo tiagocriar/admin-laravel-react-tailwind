@@ -1,36 +1,47 @@
-import { useState } from 'react';
-import Sidebar from '@/Components/Sidebar';
-import Header from '@/Components/Header';
+import { useState } from "react";
+import { Head, usePage } from "@inertiajs/react";
 
-export default function Authenticated({ user, header, children }) {
-    const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
+import Sidebar from "@/Components/Sidebar";
+import Header from "@/Components/Header";
+
+export default function Authenticated({ children }) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const {
+        breadcrumb: { pageName } = {},
+    } = usePage().props;
 
     return (
-      <div className="dark:bg-boxdark-2 dark:text-bodydark">
-        {/* <!-- ===== Page Wrapper Start ===== --> */}
-        <div className="flex h-screen overflow-hidden">
-          {/* <!-- ===== Sidebar Start ===== --> */}
-          <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-          {/* <!-- ===== Sidebar End ===== --> */}
+        <div className="dark:bg-boxdark-2 dark:text-bodydark">
+            {/* <!-- ===== Page Wrapper Start ===== --> */}
+            <div className="flex h-screen overflow-hidden">
+                {/* <!-- ===== Sidebar Start ===== --> */}
+                <Sidebar
+                    sidebarOpen={sidebarOpen}
+                    setSidebarOpen={setSidebarOpen}
+                />
+                {/* <!-- ===== Sidebar End ===== --> */}
 
-          {/* <!-- ===== Content Area Start ===== --> */}
-          <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
-            {/* <!-- ===== Header Start ===== --> */}
-            <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-            {/* <!-- ===== Header End ===== --> */}
+                {/* <!-- ===== Content Area Start ===== --> */}
+                <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
+                    {/* <!-- ===== Header Start ===== --> */}
+                    <Header
+                        sidebarOpen={sidebarOpen}
+                        setSidebarOpen={setSidebarOpen}
+                    />
+                    {/* <!-- ===== Header End ===== --> */}
 
-            {/* <!-- ===== Main Content Start ===== --> */}
-            <main>
-              <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-                {children}
-              </div>
-            </main>
-            {/* <!-- ===== Main Content End ===== --> */}
-          </div>
-          {/* <!-- ===== Content Area End ===== --> */}
+                    {/* <!-- ===== Main Content Start ===== --> */}
+                    <main>
+                        <Head title={pageName ?? 'App'} />
+                        <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
+                            {children}
+                        </div>
+                    </main>
+                    {/* <!-- ===== Main Content End ===== --> */}
+                </div>
+                {/* <!-- ===== Content Area End ===== --> */}
+            </div>
+            {/* <!-- ===== Page Wrapper End ===== --> */}
         </div>
-        {/* <!-- ===== Page Wrapper End ===== --> */}
-      </div>
     );
 }

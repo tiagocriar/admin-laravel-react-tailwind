@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import ApplicationLogo from "@/Components/ApplicationLogo";
-import { BsPersonAdd, BsFillPersonLinesFill, BsFillCaretRightFill } from "react-icons/bs";
+import { BsPersonAdd, BsFillPersonLinesFill, BsBookmarksFill, BsBoxSeamFill } from "react-icons/bs";
+import { FaSitemap } from "react-icons/fa";
 import { Link, usePage } from "@inertiajs/react";
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
@@ -120,7 +121,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                 "bg-graydark dark:bg-meta-4"
                             }`}
                                     >
-                                        <BsFillCaretRightFill /> Produtos
+                                        <BsBoxSeamFill /> Produtos
                                     </Link>
                                 </li>
                                 <li className={`${permissions?.includes('MARCAS') ? '' : 'hidden'}`}>
@@ -132,7 +133,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                 "bg-graydark dark:bg-meta-4"
                             }`}
                                     >
-                                        <BsFillCaretRightFill /> Marcas
+                                        <BsBookmarksFill /> Marcas
                                     </Link>
                                 </li>
                                 <li className={`${permissions?.includes('CATEGORIAS') ? '' : 'hidden'}`}>
@@ -144,7 +145,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                 "bg-graydark dark:bg-meta-4"
                             }`}
                                     >
-                                        <BsFillCaretRightFill /> Categorias
+                                        <FaSitemap /> Categorias
                                     </Link>
                                 </li>
                             </ul>

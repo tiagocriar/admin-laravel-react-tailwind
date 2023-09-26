@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
-import Checkbox from '@/Components/Checkbox';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
-import { Head, Link, useForm } from '@inertiajs/react';
+import { Head, useForm } from '@inertiajs/react';
 
 export default function Login({ status }) {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -28,7 +27,7 @@ export default function Login({ status }) {
 
     return (
         <GuestLayout>
-            <Head title="Log in" />
+            <Head title="Login" />
 
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
 
@@ -40,6 +39,7 @@ export default function Login({ status }) {
                         id="email"
                         type="email"
                         name="email"
+                        placeholder="Seu email"
                         value={data.email}
                         className="mt-1 block w-full"
                         autoComplete="username"
@@ -51,12 +51,13 @@ export default function Login({ status }) {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                    <InputLabel htmlFor="password" value="Senha" />
 
                     <TextInput
                         id="password"
                         type="password"
                         name="password"
+                        placeholder="Senha"
                         value={data.password}
                         className="mt-1 block w-full"
                         autoComplete="current-password"
