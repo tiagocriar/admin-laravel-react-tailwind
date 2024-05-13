@@ -1,6 +1,6 @@
 ## ADMIN Laravel Test (Teste Fullstack para Miner Tecnologia)
 
-ADMIN Laravel Test é um projeto teste desenvolvido em PHP com framework Laravel 10. Para UI foi utilizado React TailAdmin. Esse teste para vaga fullstack na empresa Miner Tecnologia, foi desenvolvido um sistema de usuários com níveis ADMIN e DEFAULT e permissões individuais para usuários: Produtos, Categorias e Marcas.
+ADMIN Laravel Test é um projeto teste desenvolvido em PHP com framework Laravel 10. Para UI foi utilizado React TailAdmin. Esse prpjeto foi desenvolvido como teste de demonstração, consiste em um sistema de usuários com níveis ADMIN e DEFAULT e permissões individuais para usuários: Produtos, Categorias e Marcas.
 
 ## Requerimentos para instalação
 
